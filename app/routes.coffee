@@ -1,0 +1,2 @@
+
+ﬁ.routes.get  '/', 'home'

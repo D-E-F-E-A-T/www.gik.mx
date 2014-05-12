@@ -1,0 +1,31 @@
+!!!5
+//if IE 8
+	html.no-js.lt-ie9(lang='es', class=is_desktop?'is_desktop':'')
+
+// [if gt IE 8] <!
+html.no-js(lang="es",class=is_desktop?'is_desktop':'')
+	// <![endif]
+
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=1024, user-scalable=no')
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		block ﬁ.meta
+
+		title= (TITLE? TITLE + ' | ' : '') + (NAME || '')
+
+		link(rel='shortcut icon', href='/static/images/favicon.ico')
+		link(rel='stylesheet',    href='/static/foundation/css/foundation.css')
+		link(rel='stylesheet',    href='/static/foundation/ico/foundation-icons.css')
+		block ﬁ.link
+
+		script(src='/static/foundation/js/vendor/modernizr.js')
+
+	body
+		#content
+			block ﬁ.content
+
+		script(src='/static/foundation/js/vendor/jquery.js')
+		script(src='/static/foundation/js/vendor/fastclick.js')
+		script(src='/static/foundation/js/foundation.min.js')
+		block ﬁ.script
