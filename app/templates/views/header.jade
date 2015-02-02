@@ -1,14 +1,16 @@
 //-Menú de navegación
 nav.top-bar
-
-	.large-8.columns
+	.large-1.columns
+		.circle
+			img(src="static/Logo-GIK-15-Gblanca.png", alt="logo")
+	.large-7.columns
 		ul
 			li(style= "display:inline-block"): a(href=ﬁ.bundles['Quienes']): span ¿Quiénes somos?
 			li(style= "display:inline-block"): a(href=ﬁ.bundles['Servicios']): span Servicios
-			li(style= "display:inline-block"): a(href=ﬁ.bundles['Portafolio']): span Portafolio
+			li(style= "display:inline-block"): a(href=ﬁ.bundles['portafolio']): span Portafolio
 			li(style= "display:inline-block"): a(href=ﬁ.bundles['Blog']): span Blog
 			li(style= "display:inline-block"): a(href=ﬁ.bundles['Contacto']): span Contacto
-	.large-4.columns
+	.large-4.medium-4.columns
 		input(type='text', placeholder='Find Stuff',style= "float:right")
 
 

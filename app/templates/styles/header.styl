@@ -1,21 +1,28 @@
-nav.top-bar
+.top-bar
+	background gris !important
+	height 77px
+	
+	& li a
+		padding 31px 40px 21px 40px !important
+		color blanco !important
+		display inline-block
 
-	ul.title-area li.name
+	
+	& li:hover
+		background coral !important
 
-		h1
-			padding-left: 1em
 
-			a
-				background      : url('/static/logo.png') no-repeat center center
-				background-size : auto 85px
-				text-indent     : -3000px
-				overflow        : hidden
-				width           : 200px
-
-@media screen and (min-width:1024px) and (max-width:1220px)
-	nav.top-bar .fi:not(:last-child)
-		display:none
-
-@media screen and (min-width:1024px) and (max-width:1080px)
-	nav.top-bar > section > ul > li > a
-		font-size: 1em
+input
+	border-radius 10px
+	margin 22px !important
+	
+.circle
+	display inline-block
+	border-radius 50%
+	background gris
+	position relative !important
+	width 100%
+	padding 1em
+	top -23px
+	left -14px
+	
