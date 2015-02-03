@@ -1,10 +1,8 @@
-!!!5
-//if IE 8
-	html.no-js.lt-ie9(lang='es', class=is_desktop?'is_desktop':'')
-
-// [if gt IE 8] <!
+doctype html
+<!--[if lt IE 9]><html class="fallback" lang="es"><![endif]-->
+<!--[if !IE]><!-->
 html.no-js(lang="es",class=is_desktop?'is_desktop':'')
-	// <![endif]
+		<!--<![endif]-->
 
 	head
 		meta(charset='utf-8')
@@ -41,12 +39,13 @@ html.no-js(lang="es",class=is_desktop?'is_desktop':'')
 			include views/fallback
 
 		
-		
 
 		script(src='/static/foundation/js/vendor/jquery.js')
 		script(src='/static/foundation/js/vendor/fastclick.js')
 		script(src='/static/foundation/js/foundation.min.js')
 		script(src='/static/foundation/js/foundation/foundation.offcanvas.js')
+		script(src='/static/browser-update/browser-update.min.js')
+		script(src='/static/browser-update/browser-update.js')
 		block ﬁ.script
 
 		if ﬁ.conf.live
