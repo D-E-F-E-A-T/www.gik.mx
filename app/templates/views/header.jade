@@ -1,16 +1,62 @@
+.barra(data-magellan-expedition='fixed', style='') 
+	nav.top-bar.menu(role='navigation',data-options='sticky_on: large', data-topbar)
+		ul.title-area
+			li.name
+				h1
+					a(href='#') My Site
+			li.toggle-topbar.menu-icon
+				a(href='#')
+					span Menu
+		section.top-bar-section.menu
+			ul.left
+				li
+					a(href=ﬁ.bundles['Quienes']): span ¿Quiénes somos?
+				li
+					a(href=ﬁ.bundles['Servicios']): span Servicios
+
+				li
+					a(href=ﬁ.bundles['Portafolio']): span Portafolio
+
+				li
+					a(href=ﬁ.bundles['Blog']): span Blog
+
+				li.has-dropdown
+					a(href=ﬁ.bundles['Contacto']): span Contacto 
+
+					ul.dropdown
+						li
+							a(href='#') link1
+						li
+							a(href='#') link2
+				li
+					a.icon-googleplus(class=".icon-googleplus",href='#')
+				li
+					a.icon-google-plus3(href='#')
+				li
+					a.icon-google-plus3(href='#')
+				li
+					a.icon-google-plus3(href='#')
+				li
+					a.icon-google-plus3(href='#')
+
+
+
+
 //-Menú de navegación
-nav.top-bar
-	.large-1.columns
-		.circle
-			img(src="static/Logo-GIK-15-Gblanca.png", alt="logo")
-	.large-7.columns
-		ul
-			li(style= "display:inline-block"): a(href=ﬁ.bundles['Quienes']): span ¿Quiénes somos?
-			li(style= "display:inline-block"): a(href=ﬁ.bundles['Servicios']): span Servicios
-			li(style= "display:inline-block"): a(href=ﬁ.bundles['Portafolio']): span Portafolio
-			li(style= "display:inline-block"): a(href=ﬁ.bundles['Blog']): span Blog
-			li(style= "display:inline-block"): a(href=ﬁ.bundles['Contacto']): span Contacto
-	.large-4.medium-4.columns
-		input(type='text', placeholder='Find Stuff',style= "float:right")
+	nav.top-bar.menu
+		.contenedor.large-1.medium-1.small-1.columns
+			.circle
+				img(src="static/Logo-GIK-15-Gblanca.png", alt="logo")
+		.large-11.medium-11.small-11.columns
+			ul
+				li: a(href=ﬁ.bundles['Quienes']): span ¿Quiénes somos?
+				li: a(href=ﬁ.bundles['Servicios']): span Servicios
+				li: a(href=ﬁ.bundles['Portafolio']): span Portafolio
+				li: a(href=ﬁ.bundles['Blog']): span Blog
+				li: a(href=ﬁ.bundles['Contacto']): span Contacto 
+
+	
+//-
+	input.search-bar(type='text', placeholder='Find Stuff',style= "float:right")
 
 

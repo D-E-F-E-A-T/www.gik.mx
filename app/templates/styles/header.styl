@@ -1,38 +1,67 @@
-.top-bar
+.barra
+	padding 0 !important
+.circle
+	background gris
+	border-radius 50%
+	display inline-block
+	height 150px
+	left 13px
+	padding 1em
+	position absolute !important
+	top -23px
+	width 150px
+
+	& img
+		left 10px
+		position relative
+		top 13px
+		width 100px
+
+.contenedor
+	position relative
+
+.menu 
 	background gris !important
-	height 77px
 	
+	& ul
+		background gris !important
+		& li
+			color blanco !important
+			background gris !important
+			& a
+				text-transform uppercase !important
+				background gris !important
+			
+				&:hover
+					background coral !important
+			
+
 		
-	
-	& li a
-		padding 31px 40px 21px 40px !important
-		color blanco !important
-		display inline-block
-		text-transform uppercase !important
 
-	
-	& li:hover
-		background coral !important
-
-
-input
+.search-bar
 	border-radius 10px
 	margin 22px !important
-	
-.circle
-	display inline-block
-	border-radius 50%
-	background gris
-	position relative !important
-	width 150px
-	height 150px
-	padding 1em
-	top -23px
-	left 13px
+	width 15%
 
-img
-	position relative
-	top 13px
-	left 10px
-	width 100px
+.icon-lupa:before {
+	content: "\e600" !important;
+}
+
+.icon-google-plus3:before {
+	content: "\ea8a" !important;
+}
+
+.icon-facebook3:before {
+	content: "\ea8e" !important;
+}
+
+.icon-twitter3:before {
+	content: "\ea93" !important;
+}
+
+.icon-youtube:before {
+	content: "\ea97" !important;
+}
+
+	
 	
