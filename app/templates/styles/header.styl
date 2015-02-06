@@ -28,11 +28,11 @@
 		background gris !important
 		& li
 			color blanco !important
-			background gris !important
 			& a
 				text-transform uppercase !important
 				background gris !important
-				font-size 1.3em
+				font-size 1.2em
+				
 			
 				&:hover
 					background coral !important
@@ -57,3 +57,29 @@
 .red
 	padding-left .5em !important
 	padding-right .1em !important
+
+@media screen and (max-width: 1386px) 
+
+	.left
+		margin-left 1em !important
+		& li
+			& a
+				font-size 1em
+				padding 0 10px !important
+			
+				
+	.right
+		& li
+			& a
+				padding 0  !important
+				font-size 1em !important
+	
+				
+@media screen and (max-width: 1088px) 
+				
+	.right
+		& li
+			& a
+				padding 0  !important
+				font-size 0.8em !important
+	
