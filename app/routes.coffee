@@ -1,11 +1,11 @@
 
 ﬁ.routes.get '/'      			,'home'
 ﬁ.routes.get '/ping'			,'ping'
-ﬁ.routes.get '/Quienes'			,'Quienes'
-ﬁ.routes.get '/Servicios'		,'Servicios'
-ﬁ.routes.get '/portafolio'		,'Portafolio'
-ﬁ.routes.get '/Blog'			,'Blog'
-ﬁ.routes.get '/Contacto'		,'Contacto'
+ﬁ.routes.get '/quienes-somos'	,'Quienes'
+ﬁ.routes.get '/servicios'		,'Servicios'
+ﬁ.routes.get '/portafolio'		,'portafolio'
+ﬁ.routes.get '/blog'			,'Blog'
+ﬁ.routes.get '/contacto'		,'Contacto'
 
 
 

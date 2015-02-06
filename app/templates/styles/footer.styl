@@ -4,13 +4,14 @@
 	overflow   : hidden
 	bottom 	   : -100px
 	border-top: solid 4px turquesa
-	height     : 307px
+	height     : auto
 	
 
 	h1
 		color          : turquesa 
 		text-transform : uppercase
 		font-size      : 20px
+		font-weight    : 700
 
 	h2,h3,h4,p
 		color        : blanco
@@ -54,9 +55,16 @@
 		border: 2px solid blanco
 		background: gris
 		color: blanco
-
-@media(max-width: 480px) {
 	
-	height     : 400px
-}
+	li 
+		display: inline-block
+		width   : 10% !important
+		
+@media screen and (max-device-width: 480px)
+	
+	h1
+		font-size      : 40px
+	p 
+		font-size      : 12px
+
 		
