@@ -13,39 +13,38 @@ html.no-js(lang="es",class=is_desktop?'is_desktop':'')
 		title= (TITLE? TITLE + ' | ' : '') + (NAME || '')
 
 		link(rel='shortcut icon', href='/static/images/favicon.ico')
-		link(rel='stylesheet',    href='/static/foundation/css/foundation.css')
-		link(rel='stylesheet',    href='/static/foundation/ico/foundation-icons.css')
+
+		link(rel='stylesheet',    href='/static/lib/foundation/css/foundation.css')
+		link(rel='stylesheet',    href='/static/lib/foundation-icons/foundation_icons_social/stylesheets/social_foundicons.css')
 		block ﬁ.link
 
-		script(src='/static/foundation/js/vendor/modernizr.js')
- 
+		script(src='/static/lib/modernizr/modernizr.js')
+
 		body
 			include views/video
 
 		header
-			include views/header	
+			include views/header
 
 		#notice
 			include views/notice
 
 		#content
 			block ﬁ.content
-		
-		footer 
+
+		footer
 			include views/footer
 
 
 		#fallback
 			include views/fallback
 
-		
 
-		script(src='/static/foundation/js/vendor/jquery.js')
-		script(src='/static/foundation/js/vendor/fastclick.js')
-		script(src='/static/foundation/js/foundation.min.js')
-		script(src='/static/foundation/js/foundation/foundation.offcanvas.js')
-		script(src='/static/browser-update/browser-update.min.js')
-		script(src='/static/browser-update/browser-update.js')
+
+		script(src='/static/lib/jquery/dist/jquery.min.js')
+		script(src='/static/lib/fastclick/lib/fastclick.js')
+		script(src='/static/lib/foundation/js/foundation.js')
+		script(src='/static/lib/browser-update/browser-update.min.js')
 		block ﬁ.script
 
 		if ﬁ.conf.live

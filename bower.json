@@ -1,0 +1,23 @@
+{
+  "name": "fi.gikmx",
+  "version": "0.1.0",
+  "authors": [
+    "Héctor Menéndez <etor.mx@gmail.com>"
+  ],
+  "description": "GiK's website",
+  "license": "MIT",
+  "homepage": "www.gik.mx",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.1",
+    "foundation-icons": "*",
+    "browser-update": "~1.0.4"
+  }
+}
