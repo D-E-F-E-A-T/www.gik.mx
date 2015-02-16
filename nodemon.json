@@ -1,15 +1,9 @@
-{
-  "restartable": "rs",
-  "verbose": true,
-  "ignore": [
-  	".git*",
-  	"fi/**",
-  	"node_modules/**/node_modules"
-  ],
-  "execMap": {
-    "coffee": "coffee"
-  },
-  "watch": [
-  	"app/"
-  ]
-}
+  {
+    "restartable": "rs",
+    "verbose": true,
+    "execMap": {
+      "coffee": "coffee"
+    },
+    "ext":"coffee styl jade",
+    "ignore": [".git", "fi","node_modules"]
+  }

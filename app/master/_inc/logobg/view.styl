@@ -1,0 +1,37 @@
+// http://css-tricks.com/examples/ShapesOfCSS/
+logobg($height, $bg, $image)
+
+	$width = $height / 0.85
+
+	overflow   : hidden
+	position   : relative
+	width      : $width
+	height     : $height
+	background : transparent
+
+	&:after
+	&:before
+		display  : block
+		content  : " "
+		overflow : hidden
+		position : absolute
+		top      : 0
+		left     : 0
+
+	&:after
+		z-index             : 1
+		width               : $width
+		height              : $height
+		background-image    : $image
+		background-size     : ($width * 0.9) auto
+		background-repeat   : no-repeat
+		background-position : ($width * 0.05) $height - ($height - ($height * 0.1))
+
+	&:before
+		z-index:0
+		left          : -1 * ($width/2)
+		top           : -1 * ($height/2)
+		width         : $width * 1.75
+		height        : $height * 1.5
+		background    : $bg
+		border-radius : 50%
