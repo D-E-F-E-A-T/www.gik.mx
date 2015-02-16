@@ -1,7 +1,15 @@
 {
+  "restartable": "rs",
   "verbose": true,
-  "ignore": [],
+  "ignore": [
+  	".git*",
+  	"fi/**",
+  	"node_modules/**/node_modules"
+  ],
   "execMap": {
     "coffee": "coffee"
-  }
+  },
+  "watch": [
+  	"app/"
+  ]
 }

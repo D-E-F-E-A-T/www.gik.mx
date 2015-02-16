@@ -1,0 +1,48 @@
+doctype html
+<!--[if lt IE 9]><html class="fallback" lang="es"><![endif]-->
+<!--[if !IE]><!-->
+html.no-js(lang="es",class=is_desktop?'is_desktop':'')
+		<!--<![endif]-->
+
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='initial-scale=1, width=device-width')
+		meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+		block ﬁ.meta
+
+		title= (TITLE? TITLE + ' | ' : '') + (NAME || '')
+
+		link(rel='shortcut icon', href='/static/images/favicon.ico')
+
+		if !ﬁ.conf.live
+			link(rel='stylesheet', href='/static/lib/foundation/css/foundation.css')
+			link(rel='stylesheet', href='/static/lib/foundation-icons/foundation_icons_social/stylesheets/social_foundicons.css')
+		else
+			link(link='stylesheet', href='/static/lib/app.css')
+		block ﬁ.link
+
+		script(src='/static/lib/modernizr/modernizr.js')
+
+	body
+
+		//- #fallback
+		//- 	include views/fallback
+
+		header#header
+			//- include views/video
+			include header/view
+
+		main#main
+			block ﬁ.content
+
+		footer#footer
+			include footer/view
+
+		script(src='/static/lib/jquery/dist/jquery.min.js')
+		script(src='/static/lib/fastclick/lib/fastclick.js')
+		script(src='/static/lib/foundation/js/foundation.js')
+		script(src='/static/lib/browser-update/browser-update.min.js')
+		block ﬁ.script
+
+		if ﬁ.conf.live
+			script(src='/static/scripts/ga.js')
