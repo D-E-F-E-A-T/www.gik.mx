@@ -1,21 +1,15 @@
-@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700');
+@require 'nib' 			// https://github.com/tj/nib
 
-// https://github.com/tj/nib
-@import 'nib'
+@require '.lib/common'	// Common mixins
+@require '.lib/color'   // Colors generator
+@require '.lib/font'    // Fonts generator
+
 
 body > header
-	@require '_inc/logobg/view'
-	@require '_inc/sticky/view'
+	@require '.lib/logobg/view'
+	@require '.lib/sticky/view'
 	@require 'header/view'
 
 body > footer
 	@import 'footer/view'
 
-body > #content
-	padding-top: 0
-
-.fi
-	font-size      : 1.50em
-	margin-right   : 0.25em
-	margin-left    : -.25em
-	vertical-align : sub

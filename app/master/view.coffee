@@ -1,7 +1,7 @@
 window.$window   = $ window
 window.$document = $ document
 
-require '_inc/sticky/view'
+require '.lib/sticky/view'
 
 $document.readyStack = []
 

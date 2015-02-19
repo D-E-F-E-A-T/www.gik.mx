@@ -1,6 +1,79 @@
+$header-size = 3rem
+
+$header-font =
+	font             : $font-primary
+	font-size        : 1.1rem
+	line-height      : $header-size
+	text-transform   : uppercase
+	color            : $color-light
+	background-color : $color-primary
+	&:hover
+		color: $color-light-brightest
+
 nav#header-menu
-	background: black
-	height: 40px
+	display         : flex
+	flex-flow       : row wrap
+	justify-content : flex-start
 
 	.logo
-		logobg(50px, black, url('/static/img/gik-logo.svg'))
+		order   : 1
+		display : block
+		logobg($header-size * 1.29, $color-primary, url('/static/img/gik-logo.svg'))
+
+	.menu
+		// As a flex-child
+		order     : 2
+		flex-grow : 1
+		// As a flex-parent
+		display         : flex
+		flex-flow       : row wrap
+		justify-content : flex-end
+
+		.menu-main
+		.menu-social
+			display    :flex
+			margin     : 0
+			padding    : 0
+
+		.menu-main
+			order         : 1
+			flex-grow     : 1
+			align-content : space-around
+
+			li a
+				{$header-font}
+				&:before
+					content  : " "
+					display  : block
+					height   : 0.5rem
+					width    : 100%
+					top      : 0
+					left     : 0
+					position : absolute
+
+				&:hover:before
+					background-color : $color-secondary
+
+
+		.menu-social
+			order: 2
+			background : black
+
+			li
+				width    : $header-size
+				border   : 1px solid red
+				overflow : hidden
+
+		li
+			position         : relative
+			flex-grow        : 1
+			background-color : tomato
+
+		li, a
+			display    : block
+			height     : $header-size
+			line-height: $header-size
+			text-align : center
+
+
+
