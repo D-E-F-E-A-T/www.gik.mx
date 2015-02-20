@@ -1,8 +1,11 @@
-$header-size = 3rem
+
+$header-size = 40px
+
+$header-social = { 'cf':4, 'fb':5, 'gp':6, 'in':9, 'pn':11, 'yt':13, 'tw':15 }
 
 $header-font =
 	font             : $font-primary
-	font-size        : 1.1rem
+	font-size        : 0.8em
 	line-height      : $header-size
 	text-transform   : uppercase
 	color            : $color-light
@@ -31,21 +34,37 @@ nav#header-menu
 
 		.menu-main
 		.menu-social
-			display    :flex
+			display    : flex
 			margin     : 0
 			padding    : 0
+
+		li
+			position   : relative
+			flex-grow  : 1
+			background : $color-primary
+
+		li, a
+			display    : block
+			height     : $header-size
+			line-height: $header-size
+			text-align : center
 
 		.menu-main
 			order         : 1
 			flex-grow     : 1
 			align-content : space-around
 
-			li a
+			a
 				{$header-font}
+				position       : relative
+				display        : inline-block
+				vertical-align : top
+				padding        : 0 1rem
+
 				&:before
 					content  : " "
 					display  : block
-					height   : 0.5rem
+					height   : 0.25rem
 					width    : 100%
 					top      : 0
 					left     : 0
@@ -54,26 +73,31 @@ nav#header-menu
 				&:hover:before
 					background-color : $color-secondary
 
-
 		.menu-social
-			order: 2
-			background : black
+			order : 2
+			a
+				overflow            : hidden
+				text-indent         : -22rem
+				margin              : 5px  5px 5px 0
+				width               : ($header-size - 10)
+				line-height         : ($header-size - 10)
+				height              : ($header-size - 10)
+				border-radius       : ($header-size - 10)
+				background-image    : url('/static/img/gik-social.svg')
+				background-repeat   : no-repeat
+				background-size     : (($header-size - 10) * 2) auto
+				background-position : 0 0
+				transition          : border-radius 0.5s ease-out;
 
-			li
-				width    : $header-size
-				border   : 1px solid red
-				overflow : hidden
-
-		li
-			position         : relative
-			flex-grow        : 1
-			background-color : tomato
-
-		li, a
-			display    : block
-			height     : $header-size
-			line-height: $header-size
-			text-align : center
+				&:hover
+					border-radius  : 5px
+					background-position-x: 100%
 
 
+			for key, val in $header-social
+				li.menu-social-{key} a
+					background-position-y: (-1 * (val - 1)) * ($header-size - 10)
+
+			li:first-child a
+				margin-left: 1rem
 

@@ -5,7 +5,7 @@ module.exports = {
             "port": 8080
         }
     },
-    "files": ["app/**"],
+    "files": ["fi/fi.lastrun"],
     "proxy": "localhost:9000",
     "port": 3000,
     "server": false,
@@ -28,10 +28,10 @@ module.exports = {
     "xip": false,
     "hostnameSuffix": false,
     "reloadOnRestart": true,
-    "notify": true,
+    "notify": false,
     "scrollProportionally": true,
     "scrollThrottle": 0,
-    "reloadDelay": 4000,
+    "reloadDelay": 0,
     "injectChanges": true,
     "startPath": null,
     "minify": true,
