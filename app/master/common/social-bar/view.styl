@@ -1,0 +1,40 @@
+// size must be in rem
+$social-bar($size, $icon-space)
+
+	$icon-size = $size - ($icon-space * 2)
+
+	a
+		overflow            : hidden
+		text-indent         : -22rem
+		margin              : $icon-space $icon-space $icon-space 0
+		width               : $icon-size
+		line-height         : $icon-size
+		height              : $icon-size
+		border-radius       : $icon-size
+		background-image    : url('/static/img/gik-social.svg')
+		background-repeat   : no-repeat
+		background-size     : ($icon-size * 2) auto
+		background-position : 0 0
+		// http://axis.netlify.com/#easing
+		transition : transform 0.2s ease-in-out-back, border-radius 0.2s ease-in-out-back
+
+		&:hover
+			border-radius: $icon-space
+
+	li:nth-child(odd) a
+		// http://axis.netlify.com/#hover-pop
+		hover-pop: 2 7deg false
+
+	li:nth-child(even) a
+		hover-pop: 2 -7deg false
+
+	li:first-child a
+		margin-left: 1rem
+
+	for key, val in $header-social
+		x = -1 * $icon-size
+		y = -1 * (val - 1) * $icon-size
+		li.menu-social-{key} a
+			background-position: 0 y
+			&:hover
+				background-position: x y

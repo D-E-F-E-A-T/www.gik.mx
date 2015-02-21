@@ -1,7 +1,7 @@
 window.$window   = $ window
 window.$document = $ document
 
-require 'common/sticky-nav/index'
+require 'common/sticky-nav/view'
 
 $document.readyStack = []
 

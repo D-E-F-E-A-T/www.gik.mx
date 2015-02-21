@@ -1,5 +1,7 @@
-@import 'common/logo-bg'
-@import 'common/sticky-nav'
+@import 'common/logo-bg/view'
+@import 'common/sticky-nav/view'
+@import 'common/social-bar/view'
+
 // @import '../common/social-bar/'
 
 $header-size   = 2.5rem
@@ -23,7 +25,7 @@ nav#header-menu
 	.logo
 		order   : 1
 		display : block
-		logobg($header-size * 1.29, $color-primary, url('/static/img/gik-logo.svg'))
+		$logo-bg($header-size * 1.29, $color-primary, url('/static/img/gik-logo.svg'))
 
 	.menu
 		// As a flex-child
@@ -78,35 +80,5 @@ nav#header-menu
 
 		.menu-social
 			order : 2
-			a
-				overflow            : hidden
-				text-indent         : -22rem
-				margin              : 0.25rem 0.25rem 0.25rem 0
-				width               : ($header-size - 0.5)
-				line-height         : ($header-size - 0.5)
-				height              : ($header-size - 0.5)
-				border-radius       : ($header-size - 0.5)
-				background-image    : url('/static/img/gik-social.svg')
-				background-repeat   : no-repeat
-				background-size     : (($header-size - 0.5) * 2) auto
-				background-position : 0 0
-				// http://axis.netlify.com/#easing
-				// http://axis.netlify.com/#hover-pop
-				transition : transform 0.2s ease-in-out-back, border-radius 0.2s ease-in-out-back
-				hover-pop  : 2 7deg false
-
-				&:hover
-					border-radius: 0.25rem
-
-			li:first-child a
-				margin-left: 1rem
-
-			for key, val in $header-social
-				x = -1 * ($header-size - 0.5)
-				y = -1 * (val - 1) * ($header-size - 0.5)
-				li.menu-social-{key} a
-					background-position: 0 y
-					&:hover
-						background-position: x y
-
+			$social-bar($header-size, 0.25rem)
 
