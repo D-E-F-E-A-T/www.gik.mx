@@ -1,16 +1,12 @@
-window.$window   = $ window
-window.$document = $ document
+window.readyStack = []
 
-require 'common/sticky-nav/view'
+require 'common/sticky/view'
 
-$document.readyStack = []
-
-$document.foundation().ready ->
-	window.IS_DESKTOP = $('html').hasClass 'is_desktop'
-
-	do Sticky
+onReady = ->
+	window.rootClasses = document.documentElement.className.split ' '
+	window.IS_DESKTOP  = rootClasses.indexOf('is_desktop') > -1
 
 	# Execute all onReady functions
-	(fn.call(this) if typeof fn is 'function') for fn in $document.readyStack
+	(fn.call(this) if typeof fn is 'function') for fn in window.readyStack
 
-
+document.addEventListener 'DOMContentLoaded', onReady, false
