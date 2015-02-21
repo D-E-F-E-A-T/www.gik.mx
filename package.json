@@ -1,7 +1,7 @@
 {
-  "name": "poc.remevet",
+  "name": "fi.gikmx",
   "version": "0.0.1",
-  "description": "Proof of Concept for REMEVET",
+  "description": "Gik's website",
   "main": "app.coffee",
   "dependencies": {},
   "devDependencies": {},
@@ -10,8 +10,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://bitbucket.etor/gikmx/poc.remevet.git"
+    "url": "ssh://bitbucket.etor/gikmx/fi.gikmx.git"
   },
-  "author": "GIK",
+  "author": "Hector Menendez",
   "license": "ISC"
 }

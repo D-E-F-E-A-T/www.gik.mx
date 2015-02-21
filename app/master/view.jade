@@ -14,11 +14,6 @@ html.no-js(lang="es",class=is_desktop?'is_desktop':'')
 
 		link(rel='shortcut icon', href='/static/images/favicon.ico')
 
-		if !ﬁ.conf.live
-			link(rel='stylesheet', href='/static/lib/foundation/css/foundation.css')
-			link(rel='stylesheet', href='/static/lib/foundation-icons/foundation_icons_social/stylesheets/social_foundicons.css')
-		else
-			link(link='stylesheet', href='/static/lib/app.css')
 		block ﬁ.link
 
 		script(src='/static/lib/modernizr/modernizr.js')
@@ -38,9 +33,6 @@ html.no-js(lang="es",class=is_desktop?'is_desktop':'')
 		footer#footer
 			include footer/view
 
-		script(src='/static/lib/jquery/dist/jquery.min.js')
-		script(src='/static/lib/fastclick/lib/fastclick.js')
-		script(src='/static/lib/foundation/js/foundation.js')
 		block ﬁ.script
 
 		if ﬁ.conf.live
