@@ -44,10 +44,11 @@ nav#header-menu
 			background : $color-primary
 
 		li, a
-			display    : block
-			height     : $header-size
-			line-height: $header-size
-			text-align : center
+			display         : block
+			height          : $header-size
+			line-height     : $header-size
+			text-align      : center
+			text-decoration : none
 
 		.menu-main
 			order         : 1
@@ -87,16 +88,20 @@ nav#header-menu
 				background-repeat   : no-repeat
 				background-size     : (($header-size - 10) * 2) auto
 				background-position : 0 0
-				transition          : border-radius 0.5s ease-out;
+				transition          : transform 0.33s ease-in-out-back, border-radius 0.33s ease-in-out-back
+				hover-pop           : 1.5 7deg false
 
 				&:hover
-					border-radius  : 5px
-					background-position-x: 100%
-
+					border-radius: 5px
 
 			for key, val in $header-social
+				x = -1 * ($header-size - 10)
+				y = (-1 * (val - 1)) * ($header-size - 10)
 				li.menu-social-{key} a
-					background-position-y: (-1 * (val - 1)) * ($header-size - 10)
+					background-position: 0 y
+					&:hover
+						background-position: x y
+
 
 			li:first-child a
 				margin-left: 1rem

@@ -1,9 +1,11 @@
-@require 'nib' 			// https://github.com/tj/nib
-
 @require '.lib/common'	// Common mixins
-@require '.lib/color'   // Colors generator
-@require '.lib/font'    // Fonts generator
+@require '.lib/color'   // Color variables generator
+@require '.lib/font'    // Font variables generator
 
+global-reset() // http://nibstyl.us/docs/#reset
+
+html,body
+	font: $font-secondary
 
 body > header
 	@require '.lib/logobg/view'
