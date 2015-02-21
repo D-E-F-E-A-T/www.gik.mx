@@ -1,17 +1,10 @@
-@require '.lib/common'	// Common mixins
-@require '.lib/color'   // Color variables generator
-@require '.lib/font'    // Font variables generator
+@require 'common'
 
-global-reset() // http://nibstyl.us/docs/#reset
-
-html,body
-	font: $font-secondary
+// Stylus' normalize.css (Nib)
+normalize-css()
 
 body > header
-	@require '.lib/logobg/view'
-	@require '.lib/sticky/view'
 	@require 'header/view'
 
 body > footer
-	@import 'footer/view'
-
+	@require 'footer/view'

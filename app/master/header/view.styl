@@ -1,11 +1,13 @@
+@import 'common/logo-bg'
+@import 'common/sticky-nav'
+// @import '../common/social-bar/'
 
-$header-size = 40px
-
+$header-size   = 2.5rem
 $header-social = { 'cf':4, 'fb':5, 'gp':6, 'in':9, 'pn':11, 'yt':13, 'tw':15 }
 
 $header-font =
-	font             : $font-primary
-	font-size        : 0.8em
+	{$font-secondary-bold}
+	font-size        : 0.9rem
 	line-height      : $header-size
 	text-transform   : uppercase
 	color            : $color-light
@@ -79,30 +81,32 @@ nav#header-menu
 			a
 				overflow            : hidden
 				text-indent         : -22rem
-				margin              : 5px  5px 5px 0
-				width               : ($header-size - 10)
-				line-height         : ($header-size - 10)
-				height              : ($header-size - 10)
-				border-radius       : ($header-size - 10)
+				margin              : 0.25rem 0.25rem 0.25rem 0
+				width               : ($header-size - 0.5)
+				line-height         : ($header-size - 0.5)
+				height              : ($header-size - 0.5)
+				border-radius       : ($header-size - 0.5)
 				background-image    : url('/static/img/gik-social.svg')
 				background-repeat   : no-repeat
-				background-size     : (($header-size - 10) * 2) auto
+				background-size     : (($header-size - 0.5) * 2) auto
 				background-position : 0 0
-				transition          : transform 0.33s ease-in-out-back, border-radius 0.33s ease-in-out-back
-				hover-pop           : 1.5 7deg false
+				// http://axis.netlify.com/#easing
+				// http://axis.netlify.com/#hover-pop
+				transition : transform 0.2s ease-in-out-back, border-radius 0.2s ease-in-out-back
+				hover-pop  : 2 7deg false
 
 				&:hover
-					border-radius: 5px
+					border-radius: 0.25rem
+
+			li:first-child a
+				margin-left: 1rem
 
 			for key, val in $header-social
-				x = -1 * ($header-size - 10)
-				y = (-1 * (val - 1)) * ($header-size - 10)
+				x = -1 * ($header-size - 0.5)
+				y = -1 * (val - 1) * ($header-size - 0.5)
 				li.menu-social-{key} a
 					background-position: 0 y
 					&:hover
 						background-position: x y
 
-
-			li:first-child a
-				margin-left: 1rem
 
