@@ -12,6 +12,20 @@ $header-font =
 	text-transform  : uppercase
 	text-decoration : none
 
+#header-cover
+	position:relative
+	overflow:hidden
+	width: 100%
+	height: 33%
+	min-height: 33%
+	text-align:center
+
+	video
+		height: auto !important
+		width: 100% !important
+		margin:0
+		padding:0
+
 nav#header-menu
 	// required for position fixed when in 'sticky mode'
 	position        : relative
@@ -80,7 +94,7 @@ nav#header-menu
 			opacity  : 0
 
 			&:checked ~ label.menu-button
-				background: $color-ternary
+				background: $color-primary-darker
 
 			&:checked ~ .menu-content
 				width      : auto
