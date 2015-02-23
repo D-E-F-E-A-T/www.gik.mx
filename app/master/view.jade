@@ -1,7 +1,13 @@
 doctype html
 <!--[if lt IE 9]><html class="fallback" lang="es"><![endif]-->
 <!--[if !IE]><!-->
-html.no-js(lang="es",class=is_desktop?'is_desktop':'')
+
+//- TODO: fi should do this automatically
+- var classes = []
+- if (is_desktop) classes.push('is_desktop');
+- if (!ﬁ.conf.live) classes.push('dev-mode');
+
+html.no-js(lang="es", class=classes.join(' '))
 		<!--<![endif]-->
 
 	head

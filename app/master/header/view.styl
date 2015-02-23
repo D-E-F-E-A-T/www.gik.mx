@@ -3,27 +3,27 @@
 
 // @import '../common/social-bar/'
 
-$header-size   = 2.5rem
-$header-social = { 'cf':4, 'fb':5, 'gp':6, 'in':9, 'pn':11, 'yt':13, 'tw':15 }
+$header-size   = 3rem
 
 $header-font =
 	{$font-secondary-bold}
-	font-size        : 0.9rem
-	line-height      : $header-size
-	text-transform   : uppercase
-	color            : $color-light
-	background-color : $color-primary
-	&:hover
-		color: $color-light-brightest
+	font-size       : 1rem
+	line-height     : $header-size
+	text-transform  : uppercase
+	text-decoration : none
 
 nav#header-menu
+	// required for position fixed when in 'sticky mode'
+	position        : relative
+	width           : 100%
 	display         : flex
-	flex-flow       : row wrap
-	justify-content : flex-start
+	flex-flow       : row nowrap
+	justify-content : space-between
 
 	.logo
-		order   : 1
-		display : block
+		display   : block
+		order     : 1
+		flex-grow : 0
 		$logo-bg($header-size * 1.29, $color-primary, url('/static/img/gik-logo.svg'))
 
 	.menu
@@ -32,52 +32,154 @@ nav#header-menu
 		flex-grow : 1
 		// As a flex-parent
 		display         : flex
-		flex-flow       : row wrap
+		flex-flow       : row nowrap
 		justify-content : flex-end
 
-		.menu-main
-		.menu-social
-			display    : flex
-			margin     : 0
-			padding    : 0
-
-		li
-			position   : relative
-			flex-grow  : 1
+		&:before // Bar behind menu that fills 100% width
+			z-index    : -1
 			background : $color-primary
+			height     : $header-size
+			content    : ' '
+			display    : block
+			position   : absolute
+			width      : 100%
+			top        : 0
+			left       : 0
+			right      : 0
+			bottom     : 0
 
-		li, a
-			display         : block
-			height          : $header-size
-			line-height     : $header-size
-			text-align      : center
-			text-decoration : none
+		.menu-button
+		.menu-content
+			position : relative
+			display  : block
 
-		.menu-main
-			order         : 1
-			flex-grow     : 1
-			align-content : space-around
+		.menu-button
+			+from-width('normal')
+				display:none
 
-			a
-				{$header-font}
-				position       : relative
-				display        : inline-block
-				vertical-align : top
-				padding        : 0 1rem
+		label.menu-button
+			text-align       : center
+			overflow         : hidden
+			text-indent      : -22em
+			height           : $header-size
+			line-height      : $header-size
+			width            : $header-size
 
-				&:before
-					content  : " "
-					display  : block
-					height   : 0.25rem
-					width    : 100%
-					top      : 0
-					left     : 0
-					position : absolute
+			&:after
+				display  : block
+				position : absolute
+				content  : ""
+				width    : 50%
+				height   : 50%
+				top      : 25%
+				left     : 25%
+				$background-hamburguer($color-light)
 
-				&:hover:before
-					background-color : $color-secondary
+		input.menu-button
+			position : absolute
+			opacity  : 0
 
-		.menu-social
-			order : 2
-			$social-bar($header-size, 0.25rem)
+			&:checked ~ label.menu-button
+				background: $color-ternary
 
+			&:checked ~ .menu-content
+				width      : auto
+				overflow   : visible
+
+		.menu-content
+			display         : flex
+			flex-grow       : 0
+			flex-flow       : column nowrap
+			justify-content : space-between
+			// off-canvas
+			width      : 0
+			overflow   : hidden
+
+			+from-width('normal')
+				flex-grow : 1
+				flex-flow : row nowrap
+				// off-canvas
+				width     : auto
+				overflow  : auto
+
+			.menu-social
+				order                     : 2
+				flex-grow                 : 0
+				background-color          : $color-primary
+				border-bottom             : 0.5rem solid $color-primary
+				border-bottom-left-radius : 1.4rem
+				$social-bar($header-size, 0.5rem)
+
+				+from-width('normal')
+					border: none
+					background-color: transparent
+
+			.menu-items
+				order     : 1
+				flex-grow : 0
+				display   : flex
+				flex-flow : column nowrap
+				margin    : 0
+				padding   : 0
+
+				+from-width('normal')
+					flex-grow : 1
+					flex-flow : row nowrap
+
+				+from-width('large')
+					flex-grow : 0
+
+				li, a
+					position    : relative
+					height      : $header-size
+					line-height : $header-size
+
+				li
+					display          : block
+					flex-grow        : 0
+					background-color : $color-primary
+
+					+from-width('normal')
+						flex-grow: 1
+
+				a
+					{$header-font}
+					z-index : 9
+					display : block
+					padding : 0 1rem
+					margin  : 0 0
+					cursor  : pointer
+					color   : $color-light
+
+					+from-width('normal')
+						display : inline-block
+						margin  : 0 1rem
+
+					&:before
+						z-index          : -1
+						position         : absolute
+						display          : block
+						content          : " "
+						width            : 0.25rem
+						height           : 100%
+						right            : 0
+						top              : 0
+						background-color : transparent
+						transition       : all 0.75s ease-in-out-back
+
+						+from-width('normal')
+							height : 0.25rem
+							width  : 100%
+							top    : 0
+							left   : 0
+							right  : auto
+
+					&:hover
+						color: $color-light-brightest
+
+						&:before // A line that serves as indicator of hovering.
+							background-color : $color-secondary
+							width: 100%
+
+							+from-width('normal')
+								height: 100%

@@ -2,3 +2,4 @@ node_modules
 app/static/lib
 .DS_*
 *.sublime-workspace
+*.log

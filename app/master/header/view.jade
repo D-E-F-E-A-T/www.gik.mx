@@ -1,10 +1,20 @@
+- var items = [];
+- items.push({ class:'nosotros'  , href:'#nosotros'   , value: '¿somos GIK?' });
+- items.push({ class:'servicios' , href:'#servicios'  , value: 'Servicios'           });
+- items.push({ class:'portafolio', href:'#portafolio' , value: 'Portafolio'          });
+- items.push({ class:'blog'      , href:'#blog'       , value: 'blog'                });
+
 nav#header-menu.sticky
 	.logo
 	.menu
-		ul.menu-main
-			li: a(href="#") ¿Porqué somos GIKs?
-			li: a(href="#") Servicios
-			li: a(href="#") Portafolio
-			li: a(href="#") Blog
 
-		include ../common/social-bar/view
+		input.menu-button(type='checkbox' id='header-menu-button')
+		label.menu-button(for='header-menu-button' role='button' aria-labelledby="menu") MENU
+
+		.menu-content
+
+			ul.menu-items: for item in items
+				li(class='menu-item-' + item.class)
+					a(href=item.href)= item.value
+
+			include ../common/social-bar/view
