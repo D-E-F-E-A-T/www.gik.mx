@@ -15,5 +15,7 @@
     "test",
     "tests"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "waypoints": "~3.1.1"
+  }
 }
