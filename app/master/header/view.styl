@@ -1,7 +1,6 @@
 @import 'common/logo-bg/view'
 @import 'common/social-bar/view'
 
-// @import '../common/social-bar/'
 
 $header-size   = 3rem
 
@@ -12,30 +11,48 @@ $header-font =
 	text-transform  : uppercase
 	text-decoration : none
 
+&
+	position : relative
+
 #header-cover
-	position   : relative
-	overflow   : hidden
-	width      : 100%
-	height     : 500px
-	min-height : 500px
-	text-align : center
-	background: url('/static/img/gik-intro.gif') no-repeat center center
-	background-size: 100% auto
+	z-index             : 0
+	position            : relative
+	overflow            : hidden
+	height              : 100vh // CSS3 unit, for viewport height.
+	text-align          : center
+	background-image    : url($HREF_MEDIA + 'gik-intro.gif')
+	background-repeat   : no-repeat
+	background-position : center center
+	background-size     : 100% auto
 
 	+from-width('normal')
-		background:none
+		background-image:none
 
 	video
 		display:none
 
 		+from-width('normal')
-			display : block
-			height  : auto !important
-			width   : 100% !important
-			margin  : 0
-			padding : 0
+			position  : fixed
+			display   : block
+			top       : 50%
+			left      : 50%
+			transform : translate(-50%, -50%)
+			height    : 100%
+			width     : auto
+			margin    : 0
+			padding   : 0
+
+		// we use a fixed dimension here because the video ratio
+		// is only affecting after that size.
+		+from-width(1700px)
+			top       : 0
+			left      : 0
+			transform : translate(0,0)
+			height    : auto
+			width     : 100%
 
 nav#header-menu
+	z-index: 1
 	// required for position fixed when in 'sticky mode'
 	position        : relative
 	width           : 100%
@@ -47,7 +64,7 @@ nav#header-menu
 		display   : block
 		order     : 1
 		flex-grow : 0
-		$logo-bg($header-size, $color-primary, url('/static/img/gik-logo.svg'))
+		$logo-bg($header-size, $color-primary, url($HREF_MEDIA + 'gik-logo.svg?G=white'))
 
 	.menu
 		// As a flex-child
