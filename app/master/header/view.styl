@@ -47,7 +47,7 @@ nav#header-menu
 		display   : block
 		order     : 1
 		flex-grow : 0
-		$logo-bg($header-size * 1.29, $color-primary, url('/static/img/gik-logo.svg'))
+		$logo-bg($header-size, $color-primary, url('/static/img/gik-logo.svg'))
 
 	.menu
 		// As a flex-child
@@ -123,7 +123,7 @@ nav#header-menu
 				flex-flow : row nowrap
 				// off-canvas
 				width     : auto
-				overflow  : auto
+				overflow  : visible
 
 			.menu-social
 				order                     : 2
