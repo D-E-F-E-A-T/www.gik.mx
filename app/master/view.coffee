@@ -1,12 +1,14 @@
-window.readyStack = []
+window.ﬁ     = {}
+ﬁ.readyStack = []
 
 require 'common/sticky/view'
 
 onReady = ->
-	window.rootClasses = document.documentElement.className.split ' '
-	window.IS_DESKTOP  = rootClasses.indexOf('is_desktop') > -1
-
+	ﬁ.rootClasses = document.documentElement.className.split ' '
+	# Remove 'no-js' class.
+	ﬁ.rootClasses.slice(ﬁ.rootClasses.indexOf('no-js'), 1)
 	# Execute all onReady functions
-	(fn.call(this) if typeof fn is 'function') for fn in window.readyStack
+	(fn.call(this) if typeof fn is 'function') for fn in ﬁ.readyStack
+	# Insert your master client-side javascript here.
 
 document.addEventListener 'DOMContentLoaded', onReady, false

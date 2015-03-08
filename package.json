@@ -1,17 +1,18 @@
 {
-  "name": "fi.gikmx",
+  "name": "faigikmx",
   "version": "0.0.1",
-  "description": "Gik's website",
+  "description": "A Fai powered app.",
   "main": "app.coffee",
-  "dependencies": {},
+  "author": "GiK <gik@gik.mx>",
+  "license": "All rights reserved",
+  "dependencies":{
+    "fai": "*"
+  },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "ssh://bitbucket.etor/gikmx/fi.gikmx.git"
-  },
-  "author": "Hector Menendez",
-  "license": "ISC"
+    "install": ".fi/bin/install",
+    "sync":"browser-sync start --config=browser-sync.json",
+    "watch":"nodemon app.coffee",
+    "test"    : "echo \"Error: no test specified\" && exit 1"
+  }
 }

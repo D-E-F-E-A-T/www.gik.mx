@@ -1,10 +1,9 @@
 @require 'common'
 
-// Stylus' normalize.css (Nib)
+// Nib's normalize
 normalize-css()
 
 // TODO: these variables should be set automatically by fai.
-$HREF_LOCAL = '/static/media/'
 $HREF_MEDIA = 'http://storage.googleapis.com/gik-app/media/'
 
 body > header
@@ -12,3 +11,6 @@ body > header
 
 body > footer
 	@require 'footer/view'
+
+#fallback
+	@require 'fallback/view'

@@ -4,7 +4,7 @@
 $header-size   = 3rem
 
 $header-font =
-	{$font-secondary-bold}
+	{$font-2nd-bold}
 	font-size       : 1rem
 	line-height     : $header-size
 	text-transform  : uppercase
@@ -71,12 +71,12 @@ nav#header-menu
 			display                    : block
 			content                    : " "
 			left                       : -11.5%
-			bottom                     : 0
+			top                        : 0
 			width                      : 70%
 			height                     : ($header-size + 0.33rem)
 			border-bottom-right-radius : 50%
 			border-bottom-left-radius  : 50%
-			background-color           : $color-primary
+			background-color           : $color-1st
 
 		object
 			z-index  : 99
@@ -97,7 +97,7 @@ nav#header-menu
 
 		&:before // Bar behind menu that fills 100% width
 			z-index    : -1
-			background : $color-primary
+			background : $color-1st
 			height     : $header-size
 			content    : ' '
 			display    : block
@@ -126,21 +126,29 @@ nav#header-menu
 			width            : $header-size
 
 			&:after
-				display  : block
-				position : absolute
-				content  : ""
-				width    : 50%
-				height   : 50%
-				top      : 25%
-				left     : 25%
-				$background-hamburguer($color-light)
+				display    : block
+				position   : absolute
+				content    : ""
+				width      : 50%
+				height     : 50%
+				top        : 25%
+				left       : 25%
+				// hamburguer menu icon.
+				background : linear-gradient(
+					to bottom,
+					$color-white, $color-white 20%,
+					transparent 20%, transparent 40%,
+					$color-white 40%, $color-white 60%,
+					transparent 60%, transparent 80%,
+					$color-white 80%, $color-white 100%
+				)
 
 		input.menu-button
 			position : absolute
 			opacity  : 0
 
 			&:checked ~ label.menu-button
-				background: $color-primary-darker
+				background: $color-1st-darker
 
 			&:checked ~ .menu-content
 				width      : auto
@@ -165,8 +173,8 @@ nav#header-menu
 			.menu-social
 				order                     : 2
 				flex-grow                 : 0
-				background-color          : $color-primary
-				border-bottom             : 0.5rem solid $color-primary
+				background-color          : $color-1st
+				border-bottom             : 0.5rem solid $color-1st
 				border-bottom-left-radius : 1.4rem
 				$social-bar($header-size, 0.5rem)
 
@@ -197,7 +205,7 @@ nav#header-menu
 				li
 					display          : block
 					flex-grow        : 0
-					background-color : $color-primary
+					background-color : $color-1st
 
 					+from-width('normal')
 						flex-grow: 1
@@ -209,7 +217,7 @@ nav#header-menu
 					padding : 0 1rem
 					margin  : 0 0
 					cursor  : pointer
-					color   : $color-light
+					color   : $color-white
 
 					+from-width('normal')
 						display : inline-block
@@ -235,10 +243,10 @@ nav#header-menu
 							right  : auto
 
 					&:hover
-						color: $color-light-brightest
+						color: $color-white-brightest
 
 						&:before // A line that serves as indicator of hovering.
-							background-color : $color-secondary
+							background-color : $color-2nd
 							width: 100%
 
 							+from-width('normal')

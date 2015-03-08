@@ -1,3 +1,3 @@
-require './fi'
+require 'fai'
 
 ﬁ.listen()

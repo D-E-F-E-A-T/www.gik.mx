@@ -1,21 +1,16 @@
 {
-  "name": "fi.gikmx",
-  "version": "0.1.0",
-  "authors": [
-    "Héctor Menéndez <etor.mx@gmail.com>"
-  ],
-  "description": "GiK's website",
-  "license": "MIT",
-  "homepage": "www.gik.mx",
+  "name": "faigikmx",
+  "version": "0.0.1",
+  "authors": ["GiK <gik@gik.mx>"],
+  "description": "",
+  "license": "All rights reserved",
+  "moduleType": ["globals"],
+  "homepage": "gik.mx",
+  "main": "app.coffee",
   "private": true,
   "ignore": [
     "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "node_modules"
   ],
-  "dependencies": {
-    "waypoints": "~3.1.1"
-  }
+  "dependencies": {}
 }

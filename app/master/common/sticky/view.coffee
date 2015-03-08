@@ -9,7 +9,7 @@ onWaypoint = (direction)->
 	classes.push name if direction is 'down'
 	@className = classes.join ' '
 
-window.readyStack.push ->
+ﬁ.readyStack.push ->
 	return console.error 'Waypoint library is not available' if not Waypoint
 
 	for element in document.getElementsByClassName className
