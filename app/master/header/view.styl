@@ -1,4 +1,3 @@
-@import 'common/logo-bg/view'
 @import 'common/social-bar/view'
 
 
@@ -61,10 +60,31 @@ nav#header-menu
 	justify-content : space-between
 
 	.logo
-		display   : block
-		order     : 1
-		flex-grow : 0
-		$logo-bg($header-size, $color-primary, url($HREF_MEDIA + 'gik-logo.svg?G=white'))
+		position: relative
+		display    : block
+		order      : 1
+		flex-grow  : 0
+
+		&:after
+			z-index                    : 0
+			position                   : absolute
+			display                    : block
+			content                    : " "
+			left                       : -11.5%
+			bottom                     : 0
+			width                      : 70%
+			height                     : ($header-size + 0.33rem)
+			border-bottom-right-radius : 50%
+			border-bottom-left-radius  : 50%
+			background-color           : $color-primary
+
+		object
+			z-index  : 99
+			display  : block
+			position : relative
+			height   : ($header-size - 0.33rem)
+			width    : auto
+			margin   : 0.33rem
 
 	.menu
 		// As a flex-child
