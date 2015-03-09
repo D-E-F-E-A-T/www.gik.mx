@@ -22,7 +22,10 @@ $header-font =
 	background-image    : url($HREF_MEDIA + 'gik-intro.gif')
 	background-repeat   : no-repeat
 	background-position : center center
-	background-size     : 100% auto
+	background-size     : auto 100%
+
+	+landscape()
+		background-size : 100% auto
 
 	+from-width('normal')
 		background-image:none
