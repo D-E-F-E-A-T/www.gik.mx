@@ -1,10 +1,14 @@
 {
   "name": "faigikmx",
   "version": "0.0.1",
-  "authors": ["GiK <gik@gik.mx>"],
+  "authors": [
+    "GiK <gik@gik.mx>"
+  ],
   "description": "",
   "license": "All rights reserved",
-  "moduleType": ["globals"],
+  "moduleType": [
+    "globals"
+  ],
   "homepage": "gik.mx",
   "main": "app.coffee",
   "private": true,
@@ -12,5 +16,7 @@
     "**/.*",
     "node_modules"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "waypoints": "~3.1.1"
+  }
 }
