@@ -5,6 +5,7 @@
 	border: 4px solid white
 	hover-lighten 5%
 	hover-pop()
+	transition: all .3s ease;
 	position : relative
 
 .img-box
@@ -12,8 +13,8 @@
 	text-align : center !important
 	margin-top : 1vw
 	img
-		height : 100%
-		width : auto
+
+		width : 100%
 
 .text
 	bottom: 0;
@@ -62,7 +63,7 @@
 
 			.col1
 				span(12/12)
-				background : #00a300
+				background : #eb5757
 				+from-width('l')
 					span(6/12)
 
@@ -75,7 +76,7 @@
 
 			.col2
 				span(12/12)
-				background-color : #00aba9
+				background-color : #54cad7
 				+from-width('l')
 					span(6/12)
 
@@ -87,7 +88,7 @@
 
 			.col3
 				span(6/12)
-				background-color : #2d89ef
+				background-color : #bef35b
 				text-align : center
 				+from-width('l')
 					span(3/12)
@@ -120,7 +121,7 @@
 
 			.col4
 				span(6/12)
-				background-color : #ffc40d
+				background-color :  #f48732
 				text-align : center
 				+from-width('l')
 					span(3/12)
@@ -151,7 +152,7 @@
 
 			.col5
 				span(12/12)
-				background-color : #ee1111
+				background-color : #8b71fb
 				+from-width('l')
 					span(6/12)
 				.img-box
@@ -162,7 +163,7 @@
 
 			.col6
 				span(12/12)
-				background-color : #9f00a7
+				background-color : #eb5757
 
 				.img-box
 					span(6/12)
@@ -179,9 +180,9 @@
 			max-width : 1024px
 			.form
 				span(12/12)
-				background : yellow
+				background : #4d4d4d
 				height : auto
-				border: 4px solid rgb(255,255,255)
+				border: 4px solid #f1f1f3
 				.label
 					span(12/12)
 					p
@@ -237,7 +238,9 @@
 						width : 90%
 						padding : 0.5em
 						border: 4px solid rgb(255,255,255)
-						background : #3498db
+						background : #eb5757
+						hover-color: #54cad7
+						transition: all .3s ease
 						color : #fff
 						font-weight : 900
 						font-size : 1.5em
