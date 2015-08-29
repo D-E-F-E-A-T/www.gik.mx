@@ -7,13 +7,12 @@
 				"*.sublime-*",
 				".bowerrc",
 				".git*",
-				"*.json",
+				"gulpfile.js",
 				"*.log"
 			],
 			"folder_exclude_patterns":
 			[
-				"node_modules",
-				".fi"
+				"node_modules"
 			],
 			"follow_symlinks": true,
 			"path": "."
