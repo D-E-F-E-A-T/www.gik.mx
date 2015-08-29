@@ -5,14 +5,15 @@
   "main": "app.coffee",
   "author": "GiK <gik@gik.mx>",
   "license": "All rights reserved",
-  "dependencies":{
-    "fai": "*"
+  "dependencies": {
+    "fai": "*",
+    "nodemailer": "^1.4.0"
   },
   "devDependencies": {},
   "scripts": {
     "install": ".fi/bin/install",
-    "sync":"browser-sync start --config=browser-sync.json",
-    "watch":"nodemon app.coffee",
-    "test"    : "echo \"Error: no test specified\" && exit 1"
+    "sync": "browser-sync start --config=browser-sync.json",
+    "watch": "nodemon app.coffee",
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
