@@ -8,17 +8,17 @@ module.exports = (request, response)->
 mailer = NodeMailer.createTransport 'SMTP',
 	service: 'Gmail'
 	auth   :
-		user: 'leo@gik.mx'
-		pass: 'daleya03'
+		user: 'mariela@gik.mx'
+		pass: '@Tixcocob59'
 
 module.exports = (request, response)->
 
 	message =
 		from    : "#{request.param('asunto')}"
 		replyTo : "#{request.param('asunto')} <#{request.param('email')}>"
-		to      : "leo@gik.mx"
-		#cc 		: 'mariela@gik.mx, di@gik.mx'
-		subject : "web@gik.mx" ##request.param('asunto')
+		to      : "etor@gik.mx"
+		cc 		: 'mariela@gik.mx'
+		subject : "web@gik.mx"
 		text    : request.param('texto')
 
 
@@ -32,13 +32,3 @@ module.exports = (request, response)->
 
 
 
-
-	# smtpTransport.sendMail mailOptions, (error, response) ->
-
-	# if error
-	# 	return console.log(error)
-
-	# else
-	# 	console.log ('Message sent')
-
-	# smtpTransport.close()
