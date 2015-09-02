@@ -48,13 +48,23 @@
 					p
 						|Contáctanos
 
-				.contener
+				.contener 
 					form(action='/enviar', method='post')
-						.contener1
-							input(type='text', title="Se necesita un nombre", name='asunto', id='asunto', placeholder="Nombre", required)
-						.contener2
-							input(type='text', title="Se necesita un email", name='email', id='email', placeholder="e-mail", required)
+						.data
+							.contener1
+								input(type='text', title="Se necesita un nombre", name='asunto', id='asunto', placeholder="Nombre", required)
+
+							.contener2
+								input(type='text', title="Se necesita un mensaje", name='texto', id='texto' placeholder="e-mail", required)
+
 						.box-message
-							input(type='text', title="Se necesita un mensaje", name='texto', id='texto' placeholder="En qué podemos ayudarte", required)
+							input(type='text', title="Se necesita un email", name='email', id='email', placeholder="En qué podemos ayudarte?", required)
+
 						.box-submit
 							input(type='submit' value='ENVIAR' id='boton')
+
+							img(src="../static/img/youtube.svg")
+							img(src="../static/img/fb.svg")
+							img(src="../static/img/twitter.svg")
+							img(src="../static/img/linkedin.svg")
+							img(src="../static/img/g.svg")
