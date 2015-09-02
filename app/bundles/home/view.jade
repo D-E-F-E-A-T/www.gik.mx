@@ -82,17 +82,17 @@
 					p
 						|Contáctanos
 
-				.contener 
+				.contener
 					form(action='/enviar', method='post')
 						.data
 							.contener1
 								input(type='text', title="Se necesita un nombre", name='asunto', id='asunto', placeholder="Nombre", required)
 
 							.contener2
-								input(type='text', title="Se necesita un mensaje", name='texto', id='texto' placeholder="e-mail", required)
+								input(type='text', title="Se necesita un mensaje", name='email', id='email' placeholder="e-mail", required)
 
 						.box-message
-							input(type='text', title="Se necesita un email", name='email', id='email', placeholder="En qué podemos ayudarte?", required)
+							input(type='text', title="Se necesita un email", name='texto', id='texto', placeholder="En qué podemos ayudarte?", required)
 
 						.box-submit
 							input(type='submit' value='ENVIAR' id='boton')
