@@ -61,6 +61,12 @@ $header-font =
 		position 	: relative
 		top 		: 25%
 
+
+input#header-menu-button:checked ~ body
+	background-color : red !important
+	position : absolute
+
+
 nav#header-menu
 	z-index: 1
 	// required for position fixed when in 'sticky mode'
@@ -164,6 +170,8 @@ nav#header-menu
 			&:checked ~ .menu-content
 				width      : auto
 				overflow   : visible
+
+
 
 		.menu-content
 			display         : flex
