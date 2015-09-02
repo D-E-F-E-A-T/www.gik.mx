@@ -1,0 +1,292 @@
+*
+	box-sizing : border-box
+
+.col1, .col2, .col3, .col4, .col5, .col6
+	border: 4px solid white
+	hover-lighten 5%
+	hover-pop()
+	transition: all .3s ease;
+	position : relative
+
+.img-box
+
+	text-align : center !important
+	margin-top : 1vw
+	img
+
+		width : 100%
+
+.text
+	bottom: 0;
+	font-size : 2vw
+	right : 0
+	text-align : center
+	top: 0;
+	margin-bottom: auto;
+	margin-top: auto;
+	p
+		color: white;
+		font-size: 5vw;
+		font-weight: 900;
+		line-height: normal;
+		margin-right: 0;
+		margin-top: 14vw;
+		margin-bottom : 0
+		text-align: center;
+		+from-width('s')
+			font-size: 5.5vw
+			margin-top: 14vw
+		+from-width('m')
+			font-size: 4vw
+			margin-top: 7vw
+
+		+from-width('l')
+			font-size: 4vw
+			margin-top: 4vw
+
+		+from-width('xl')
+			font-size: 2vw
+			margin-top: 4vw
+
+#main
+	position : relative
+	.content
+		position : absolute
+		top : -12em
+		+from-width('l')
+			top : 0
+			position : relative
+
+		#servicios
+			margin : 0 auto
+			max-width : 1024px
+
+			.col1
+				span(12/12)
+				background : #eb5757
+				+from-width('l')
+					span(6/12)
+
+
+				.img-box
+					span(6/12)
+
+				.text
+					span(6/12)
+					p
+						margin-top : 3vw
+
+			.col2
+				span(12/12)
+				background-color : #54cad7
+				+from-width('l')
+					span(6/12)
+
+				.img-box
+					span(6/12)
+
+
+				.text
+					span(6/12)
+
+
+			.col3
+				span(6/12)
+				background-color : #bef35b
+				text-align : center
+				+from-width('l')
+					span(3/12)
+
+				.img-box
+					span(8/12)
+					margin-top : 0.54em
+					+from-width('l')
+						span(12/12)
+						margin-top : 0.5em
+
+
+
+				.text
+					span(4/12)
+					bottom : 0
+					right : 0
+					+from-width('l')
+						span(12/12)
+					p
+						font-size: 4vw
+						top : 13px
+						margin-top : 14vw
+						+from-width('m')
+							margin-top : 6vw
+						+from-width('l')
+							font-size: 2vw
+							top : 13px
+							margin-top : -30px
+
+			.col4
+				span(6/12)
+				background-color :  #f48732
+				text-align : center
+				+from-width('l')
+					span(3/12)
+
+				.img-box
+					span(8/12)
+					margin-top : 1em
+					+from-width('l')
+						span(12/12)
+						margin-top : 0.5em
+					+from-width('xl')
+						img
+							width : 75%
+
+				.text
+					span(4/12)
+					bottom : 0
+					right : 0
+					+from-width('l')
+						span(12/12)
+					p
+						font-size: 4vw
+						top : 13px
+						margin-top : 14vw
+						+from-width('m')
+							margin-top : 6vw
+						+from-width('l')
+							font-size: 1.4vw
+							top : 13px
+							margin-top : -13px
+						+from-width('xl')
+							font-size: 1.4vw
+							top : 13px
+							margin-top : -10px
+
+			.col5
+				span(12/12)
+				background-color : #8b71fb
+				+from-width('l')
+					span(6/12)
+				.img-box
+					span(6/12)
+
+				.text
+					span(6/12)
+
+			.col6
+				span(12/12)
+				background-color : #eb5757
+
+				.img-box
+					span(6/12)
+
+				.text
+					span(6/12)
+					p
+						margin-top : 2vw
+						+from-width('s')
+							margin-top : 2vw
+
+		#blog
+			margin : 0 auto
+			.form
+				span(12/12)
+				background : #4d4d4d
+				height : auto
+				border: 4px solid #f1f1f3
+				.label
+					span(12/12)
+					p
+						font-size : 2em
+						text-align : center
+						font-weight : 900
+						color : white
+
+
+				.contener
+					span(12/12)
+					.data
+						span(12/12)
+						+from-width("l")
+							span(3/12)
+						.contener1
+							span(6/12)
+							margin-bottom : 1em
+							text-align : center
+							margin-left: 3%
+							width : 90%
+							input
+								width : 100%
+								padding : 0.5em 2.5em
+								background-image: url(http://rexkirby.com/kirbyandson/images/name.svg)
+								background-repeat : no-repeat
+								background-size: 30px 30px
+								border: 3px solid rgba(0,0,0,0)
+
+
+						.contener2
+							span(6/12)
+							margin-bottom : 1em
+							text-align : left
+							margin-left: 3%
+							width : 90%
+							input
+								width : 100%
+								padding : 0.5em 2.5em
+								background-image: url(http://rexkirby.com/kirbyandson/images/email.svg)
+								background-repeat : no-repeat
+								background-size: 30px 30px
+								border: 3px solid rgba(0,0,0,0)
+
+
+					.box-message
+						+from-width("s")
+							span(12/12)
+						padding-left : 0.5em
+						margin-bottom : 1em
+						input
+							height : 15vw
+							border: 3px solid rgba(0,0,0,0)
+							width:91%
+							margin-left :2%
+							
+						+from-width("l")
+							span(6/12)
+							margin-bottom : 1em
+							text-align : center
+							input
+								width : 100%
+								padding : 0.5em
+								height : 5vw
+								border: 3px solid rgba(0,0,0,0)
+
+					.box-submit
+						+from-width("s")
+							span(12/12)
+							
+							width:100%
+							input
+								margin-left : 3%
+							img
+								margin :  7% 4% 4% 4%
+								width: 7%
+
+						+from-width("l")
+							span(3/12)
+							margin-bottom : 1em
+							text-align : center
+
+						input
+							width : 90%
+							padding : 0.5em
+							border: 4px solid rgb(255,255,255)
+							background : #eb5757
+							hover-color: #54cad7
+							transition: all .3s ease
+							color : #fff
+							font-weight : 900
+							font-size : 1.5em
+						img
+							width: 6%
+							margin : 3% 6.5%
+
+
