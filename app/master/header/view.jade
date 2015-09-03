@@ -10,19 +10,19 @@
 		source(src= $HREF_MEDIA + 'gik-intro.mp4'  type='video/mp4')
 	.logo-cover
 		object(data= $HREF_MEDIA + 'gik-logo.svg?G=white' type='image/svg+xml')
+.box-h
+	nav#header-menu.sticky
+		.logo
+			object(data= $HREF_MEDIA + 'gik-logo.svg?G=white' type='image/svg+xml')
 
-nav#header-menu.sticky
-	.logo
-		object(data= $HREF_MEDIA + 'gik-logo.svg?G=white' type='image/svg+xml')
+		.menu
+			input.menu-button(type='checkbox' id='header-menu-button')
+			label.menu-button(for='header-menu-button' role='button' aria-labelledby="menu") MENU
 
-	.menu
-		input.menu-button(type='checkbox' id='header-menu-button')
-		label.menu-button(for='header-menu-button' role='button' aria-labelledby="menu") MENU
+			.menu-content
 
-		.menu-content
+				ul.menu-items: for item in items
+					li(class='menu-item-' + item.class)
+						a(href=item.href)= item.value
 
-			ul.menu-items: for item in items
-				li(class='menu-item-' + item.class)
-					a(href=item.href)= item.value
-
-			include ../common/social-bar/view
+				include ../common/social-bar/view

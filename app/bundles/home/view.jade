@@ -78,32 +78,42 @@
 
 		#blog
 			.form
-				.label
-					p
-						|Contáctanos
+				.box-foo
+					.label
+						p
+							|Contáctanos
 
-				.contener
-					form(action='/enviar', method='post')
-						.data
-							.contener1
-								input(type='text', title="Se necesita un nombre", name='asunto', id='asunto', placeholder="Nombre", required)
+					.contener
+						form(action='/enviar', method='post')
+							.box-input
+								.contener1
+									input(type='text', title="Se necesita un nombre", name='asunto', id='asunto', placeholder="Nombre", required)
 
-							.contener2
-								input(type='text', title="Se necesita un mensaje", name='email', id='email' placeholder="e-mail", required)
+								.contener2
+									input(type='text', title="Se necesita un mensaje", name='email', id='email' placeholder="e-mail", required)
 
-						.box-message
-							input(type='text', title="Se necesita un email", name='texto', id='texto', placeholder="En qué podemos ayudarte?", required)
 
-						.box-submit
-							input(type='submit' value='ENVIAR' id='boton')
+							.box-message
+								.contener3
+									input(type='text', title="Se necesita un email", name='texto', id='texto', placeholder="En qué podemos ayudarte?", required)
 
-							
-							img(src="../static/img/youtube.svg")
-							a(href="https://www.facebook.com/gikmx" target="_blank")
-								img(src="../static/img/fb.svg")
-							a(href="https://twitter.com/gikmx" target="_blank")
-								img(src="../static/img/twitter.svg")
-							a(href="	https://www.linkedin.com/company/2594019?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2594019%2Cidx%3A2-1-8%2CtarId%3A1441231286291%2Ctas%3Agik" target="_blank")
-								img(src="../static/img/linkedin.svg")
-							a(href="https://plus.google.com/u/0/109296914157955309495/about" target="_blank")
-								img(src="../static/img/g.svg")
+
+							.box-3th
+								.box-submit
+									input(type='submit' value='ENVIAR' id='boton')
+
+								.box-icon
+									.icon
+										img(src="../static/img/youtube.svg")
+										a(href="https://www.facebook.com/gikmx" target="_blank")
+									.icon
+										img(src="../static/img/fb.svg")
+										a(href="https://twitter.com/gikmx" target="_blank")
+									.icon
+										img(src="../static/img/twitter.svg")
+										a(href="	https://www.linkedin.com/company/2594019?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A2594019%2Cidx%3A2-1-8%2CtarId%3A1441231286291%2Ctas%3Agik" target="_blank")
+									.icon
+										img(src="../static/img/linkedin.svg")
+										a(href="https://plus.google.com/u/0/109296914157955309495/about" target="_blank")
+									.icon
+										img(src="../static/img/g.svg")
