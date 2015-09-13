@@ -1,4 +1,5 @@
 node_modules
 bower_components
 app/static/lib
-/*.log
+*.log
+*.sublime-workspace
