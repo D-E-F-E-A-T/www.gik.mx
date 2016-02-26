@@ -3,3 +3,4 @@ node_modules
 *.sublime-workspace
 *.log
 app/static/lib
+app/bundles/send/creds.json

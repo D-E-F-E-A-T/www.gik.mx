@@ -1,15 +1,15 @@
-module.exports = (request, response, next) ->
-
-
 NodeMailer = require 'nodemailer'
 
-module.exports = (request, response)->
+try
+	Creds = require "#{__dirname}/creds.json"
+catch e
+	throw new ﬁ.error 'Please, create a credentials file.'
 
 mailer = NodeMailer.createTransport 'SMTP',
 	service: 'Gmail'
 	auth   :
-		user: 'mariela@gik.mx'
-		pass: '@Tixcocob59'
+		user: Creds.user
+		pass: Creds.pass
 
 module.exports = (request, response)->
 
@@ -18,7 +18,7 @@ module.exports = (request, response)->
 		replyTo : "#{request.param('asunto')} <#{request.param('email')}>"
 		to      : "etor@gik.mx"
 		cc 		: 'mariela@gik.mx'
-		subject : "web@gik.mx"
+		subject : "Contacto desde sitio web"
 		text    : request.param('texto')
 
 
