@@ -5,7 +5,7 @@ locals = {}
 locals.rootClasses = ['no-js']
 locals.rootClasses.push 'dev-mode' if not ﬁ.conf.live
 
-locals.$HREF_MEDIA = "http://storage.googleapis.com/gik-app/media/"
+locals.$HREF_MEDIA = "http://s3-us-west-2.amazonaws.com/gik.mx/"
 
 
 module.exports = locals

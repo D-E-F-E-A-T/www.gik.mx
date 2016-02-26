@@ -17,6 +17,6 @@
   "scripts": {
     "bower":"node_modules/.bin/bower --",
     "coffee": "node_modules/.bin/coffee --",
-    "watch": "node_modules/.bin/nodemon app.coffee --"
+    "start": "node_modules/.bin/nodemon app.coffee --"
   }
 }
