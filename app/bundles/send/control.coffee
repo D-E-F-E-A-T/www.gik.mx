@@ -14,7 +14,7 @@ mailer = NodeMailer.createTransport 'SMTP',
 module.exports = (request, response)->
 
 	message =
-		from    : "#{request.param('asunto')}"
+		from    : "#{request.param('email')}"
 		replyTo : "#{request.param('asunto')} <#{request.param('email')}>"
 		to      : "etor@gik.mx"
 		cc 		: 'mariela@gik.mx'

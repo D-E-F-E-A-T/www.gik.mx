@@ -4,3 +4,4 @@ node_modules
 *.log
 app/static/lib
 app/bundles/send/creds.json
+.fi
