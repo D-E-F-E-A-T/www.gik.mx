@@ -5,15 +5,11 @@
 			"file_exclude_patterns":
 			[
 				"*.sublime-*",
-				".bowerrc",
-				".git*",
-				"*.json",
 				"*.log"
 			],
 			"folder_exclude_patterns":
 			[
-				"node_modules",
-				".fi"
+				"node_modules"
 			],
 			"follow_symlinks": true,
 			"path": "."

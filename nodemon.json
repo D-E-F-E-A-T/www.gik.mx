@@ -9,6 +9,6 @@
     	"app/static/lib"
     ],
     "execMap": {
-      "coffee": "coffee"
+      "coffee": "npm run coffee"
     }
   }

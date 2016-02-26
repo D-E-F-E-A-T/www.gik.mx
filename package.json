@@ -9,11 +9,14 @@
     "fai": "*",
     "nodemailer": "^0.7.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "coffee-script": "^1.10.0",
+    "nodemon": "^1.9.1"
+  },
   "scripts": {
-    "install": ".fi/bin/install",
-    "sync": "browser-sync start --config=browser-sync.json",
-    "watch": "nodemon app.coffee",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bower":"node_modules/.bin/bower --",
+    "coffee": "node_modules/.bin/coffee --",
+    "watch": "node_modules/.bin/nodemon app.coffee --"
   }
 }
