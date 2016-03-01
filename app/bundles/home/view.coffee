@@ -1,5 +1,0 @@
-ﬁ.readyStack.push ->
-
-
-
-
